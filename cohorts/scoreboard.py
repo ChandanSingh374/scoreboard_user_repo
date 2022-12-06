@@ -10,7 +10,7 @@ def fetchRankListFromDB(cohort_id):
     ).order_by('-score').values_list('user__email', 'score')
 
 def FetchRankList(cohort_id):
-    pass
+    return fetchRankListFromDB(cohort_id)
 
 def updateUserRank(user_email, cohort_id, new_score):
     pass
